@@ -1,1 +1,26 @@
+Name: Chisel
+Description: Chisel is a fast TCP/UDP tunnel, transported over HTTP, used to connect local services to remote systems. It is commonly used for bypassing firewalls, performing network tunneling, or establishing persistent access during penetration testing. Chisel can create both reverse and forward tunnels for redirecting traffic between different network environments. It is cross-platform and can be installed on Windows, Linux, and macOS systems.
+Author: Muhammad Nameer
+Created: 2025-04-03
+Commands:
+  - Command: chisel server -p <PORT>
+    Description: Starts the Chisel server that listens on the specified port. This command is typically used to create a server-side tunnel.
+    Usecase: Setting up a Chisel server for tunneling local services to remote systems.
 
+  - Command: chisel client <SERVER>:<PORT> <TUNNEL_CONFIG>
+    Description:Connects the Chisel client to a remote Chisel server, establishing a tunnel between the local machine and the server. You can configure different types of tunneling (e.g., reverse, forward).
+    Usecase: Using Chisel client to create secure tunnels to remote hosts.
+
+    Category: Tunneling
+    Privileges: User
+    OperatingSystem: Windows, Linux, MacOS
+Full_Path:
+  - Path: Installed version of Chisel, executable anywhere on the system.
+Detection:
+  - Command: Execution of the binary with arguments such as server, client, or tunneling options.
+Resources:
+  - Link: https://github.com/jpillora/chisel
+Acknowledgement:
+  - Person: Muhammad Nameer
+    Handle: '@Namir05'
+---
